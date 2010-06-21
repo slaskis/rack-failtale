@@ -3,6 +3,11 @@ Rack::Failtale
 
 A very simple Rack Middleware for reporting errors to the Failtale Service.
 
+Install:
+--------
+
+	gem install rack-failtale
+
 Usage:
 ------
 
@@ -12,4 +17,4 @@ Usage:
 TODO:
 -----
 
-Allow for reporting to a Failtale service on other domains than the official.
+* Allow for reporting to a Failtale service on other domains than the official.
