@@ -3,7 +3,7 @@ require 'bundler'
 
 Gem::Specification.new do |s|
   s.name        = "rack-failtale"
-  s.version     = "0.1.0"
+  s.version     = "0.1.1"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Robert Sköld"]
   s.email       = ["robert@publicclass.se"]
