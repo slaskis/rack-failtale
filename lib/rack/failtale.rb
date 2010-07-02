@@ -1,3 +1,4 @@
+require "pp"
 require "failtale-reporter"
 
 module Rack
@@ -7,13 +8,17 @@ module Rack
     def initialize(app, api_key = nil)
       @app = app
       FailtaleReporter.configure do |config|
+        config.default_reporter "rack"
         config.api_token api_key
         config.application_root ::File.dirname(::File.dirname(__FILE__))
+        config.information_collector do |error,env|
+          error.environment.merge!(env)
+        end
       end
     end
     
     def call(env)
-      FailtaleReporter.report do
+      FailtaleReporter.report(nil,env) do
         @app.call(env)
       end
     end

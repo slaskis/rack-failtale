@@ -17,4 +17,5 @@ Usage:
 TODO:
 -----
 
-* Allow for reporting to a Failtale service on other domains than the official.
+* Allow for reporting to a Failtale service on other domains than failtale.be. (see FailtaleReporter::base_uri)
+* Allow for filtering of the exceptions and environment variables (so we won't show passwords and such in plain text)
